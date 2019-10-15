@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./calculator.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <header>
+        <h1>Financial Calculator</h1>
+    </header>
+    <div class="calc">
+        <form id="calcForm" onkeypress="numPress()">
+            <input class="display" type="text" name="display">
+            <div class="row">
+                <input type="button" class="button" value="TA" onclick="btnClick('Liabilities+Equity')">
+                <input type="button" class="button" value="NI" onclick="btnClick('Rev-Exp')">
+                <input type="button" class="button" value="BeP" onclick="btnClick('Sales-FC-VC')">
+                <input type="button" class="button" value="CR" onclick="btnClick('Cash/Liabilities')">
+            </div>
+            <div class="row">
+                <input type="button" class="button" value="PM" onclick="btnClick('NI/Sales')">
+                <input type="button" class="button" value="DER" onclick="btnClick('Liabilities/Equity')">
+                <input type="button" class="button" value="CGS" onclick="btnClick('Inventory+CNI-EI')">
+                <input type="button" class="button" value="PM" onclick="btnClick('BRE+NIorNL-CD')">
+            </div>
+            <div class="row">
+                <input type="button" class="button" value="1" onclick="btnClick(1)">
+                <input type="button" class="button" value="2" onclick="btnClick(2)">
+                <input type="button" class="button" value="3" onclick="btnClick(3)">
+                <input type="button" class="button" value="/" onclick="btnClick('/')">
+            </div>
+            <div class="row">
+                <input type="button" class="button" value="4" onclick="btnClick(4)">
+                <input type="button" class="button" value="5" onclick="btnClick(5)">
+                <input type="button" class="button" value="6" onclick="btnClick(6)">
+                <input type="button" class="button" value="x" onclick="btnClick('*')">
+            </div>
+            <div class="row">
+                <input type="button" class="button" value="7" onclick="btnClick(7)">
+                <input type="button" class="button" value="8" onclick="btnClick(8)">
+                <input type="button" class="button" value="9" onclick="btnClick(9)">
+                <input type="button" class="button" value="-" onclick="btnClick('-')">
+            </div>
+            <div class="row">
+                <input type="button" class="button" value="0" onclick="btnClick('0')">
+                <input type="button" class="button" value="00" onclick="btnClick('00')">
+                <input type="button" class="button" value="." onclick="btnClick('.')">
+                <input type="button" class="button" value="+" onclick="btnClick('+')"
+                    onkeypress="if (e.which == 187) {('+')}">
+            </div>
+            <div class="row">
+                <input type="button" class="button" value="DEL" onclick="backspace()">
+                <input type="button" class="button" value="C" onclick="clearForm()">
+                <input type="button" class="button" id="equals" value="=" onclick="equalsTo()">
+            </div>
+
+
+
+        </form>
+    </div>
+
+
+    <script src="./calculator.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,65 @@
+
+body {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(239,246,249,1) 0%, rgba(206,239,253,1) 90% );
+
+
+}
+header {
+    text-align: center;
+    border-bottom: .1em solid black;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 25px;
+}
+.calc {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(51,102,153,1) 0%, rgba(68,116,163,1) 90% );
+    padding-top:5em;
+    padding-bottom: 10em;
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+    border: .05em solid black;
+}
+
+#calcForm {
+    width: 24em;
+    height: 28em;
+    margin: 0 auto;
+    padding-top: 2em;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
+ background-blend-mode: multiply,multiply;
+    border: .03em solid black;
+    box-shadow: inset 0 0 15px #ffffff;
+    border-radius: 20px;
+    
+}
+
+.display {
+    width: 20em;
+    height: 2em;
+    margin-top: .5em;
+    margin-bottom: 3.5em;
+    padding-right:.3em;
+    text-align: right;
+    font-size: 15px;
+    justify-content: center;
+    border-style: inset;
+    background-color: white;
+}
+
+.button {
+    width: 1.5em;
+    font-size: 45px;
+}
+
+input[type='button' i] {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.row {
+    text-align: center;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+
+
