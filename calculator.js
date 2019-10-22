@@ -10,6 +10,11 @@ document.body.onkeypress = function numPress() {
     for (var i = 0; i < 10; i++) {
         if (event.keyCode == i + 48) calcForm.display.value += i;
     }
+    // var keys= ['+','-','x','/']
+    // var keysLength = keys.length
+    // for(i = 0; i < keysLength; i++) {
+
+    // }
 };
 
 
