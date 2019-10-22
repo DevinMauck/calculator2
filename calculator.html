@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="./calculator.css">
     <title>Calculator</title>
 </head>
+<script>
+    $(document).ready(function () {
+        $('input[title]').tooltip({ placement: 'top' });
+    })
+</script>
 
 <body>
     <header>
@@ -18,16 +23,24 @@
         <form id="calcForm" onkeypress="numPress()">
             <input class="display" type="text" name="display">
             <div class="row">
-                <input type="button" class="button" value="TA" onclick="btnClick('Liabilities+Equity')">
-                <input type="button" class="button" value="NI" onclick="btnClick('Rev-Exp')">
-                <input type="button" class="button" value="BeP" onclick="btnClick('Sales-FC-VC')">
-                <input type="button" class="button" value="CR" onclick="btnClick('Cash/Liabilities')">
+                <input type="button" class="button" rel="tooltip" title="Total Assets" value="TA"
+                    onclick="btnClick('Liabilities+Equity')">
+                <input type="button" class="button" rel="tooltip" title="Net Income" value="NI"
+                    onclick="btnClick('Rev-Exp')">
+                <input type="button" class="button" rel="tooltip" title="Break Even Point" value="BeP"
+                    onclick="btnClick('Sales-FC-VC')">
+                <input type="button" class="button" rel="tooltip" title="Cash Ratio" value="CR"
+                    onclick="btnClick('Cash/Liabilities')">
             </div>
             <div class="row">
-                <input type="button" class="button" value="PM" onclick="btnClick('NI/Sales')">
-                <input type="button" class="button" value="DER" onclick="btnClick('Liabilities/Equity')">
-                <input type="button" class="button" value="CGS" onclick="btnClick('Inventory+CNI-EI')">
-                <input type="button" class="button" value="PM" onclick="btnClick('BRE+NIorNL-CD')">
+                <input type="button" class="button" rel="tooltip" title="Profit Margin" value="PM"
+                    onclick="btnClick('NI/Sales')">
+                <input type="button" class="button" rel="tooltip" title="Debt-to-Equity Ratio" value="DeR"
+                    onclick="btnClick('Liabilities/Equity')">
+                <input type="button" class="button" rel="tooltip" title="Cost of Goods Sold" value="CGS"
+                    onclick="btnClick('Inventory+CNI-EI')">
+                <input type="button" class="button" rel="tooltip" title="Retained Earnings" value="RE"
+                    onclick="btnClick('BRE+NIorNL-CD')">
             </div>
             <div class="row">
                 <input type="button" class="button" value="1" onclick="btnClick(1)">
@@ -51,8 +64,7 @@
                 <input type="button" class="button" value="0" onclick="btnClick('0')">
                 <input type="button" class="button" value="00" onclick="btnClick('00')">
                 <input type="button" class="button" value="." onclick="btnClick('.')">
-                <input type="button" class="button" value="+" onclick="btnClick('+')"
-                    onkeypress="if (e.which == 187) {('+')}">
+                <input type="button" class="button" value="+" onclick="btnClick('+')">
             </div>
             <div class="row">
                 <input type="button" class="button" value="DEL" onclick="backspace()">
@@ -67,6 +79,7 @@
 
 
     <script src="./calculator.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </body>
 
 

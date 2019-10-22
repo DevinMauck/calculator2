@@ -3,7 +3,7 @@ function btnClick(a) {
     calcForm.display.value += a;
 }
 
-// Button on Key Press
+// Numbers on Key Press
 let display = document.getElementsByClassName('display');
 document.body.onkeypress = function numPress() {
     // Select keys 0-9
@@ -18,18 +18,21 @@ function equalsTo() {
     calcForm.display.value = eval(calcForm.display.value);
 }
 // Return key onkeypress
-document.onkeypress = enter;
-function enter(e) {
-    if (e.which == 13) { equalsTo(); }
-}
+// document.onkeypress = enter;
+// function enter(e) {
+//     if (e.which == 13) { equalsTo(); }
+// }
 
 
 // Reset/All Clear Function
 function clearForm() {
     calcForm.display.value = "";
 }
-// C Key to Clear
-
+// // C Key to Clear
+// document.onkeypress = allClear;
+// function allClear(e) {
+//     if (e.which || e.keyCode == 67) { clearForm(); }
+// }
 
 // Backspace Function
 function backspace() {
@@ -37,7 +40,5 @@ function backspace() {
     calcForm.display.value = preValue.substr(0, preValue.length - 1);
 };
 
-function keyPress() {
-    var keys = ['+', '-', '*', '/']
 
-}
+
